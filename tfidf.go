@@ -3,11 +3,10 @@ package tfidf
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"log"
 	"math"
 
-	"github.com/wilcosheh/tfidf/seg"
-	"github.com/wilcosheh/tfidf/util"
+	"github.com/ringsaturn/tfidf/seg"
+	"github.com/ringsaturn/tfidf/util"
 )
 
 // TFIDF tfidf model
@@ -42,20 +41,20 @@ func NewTokenizer(tokenizer seg.Tokenizer) *TFIDF {
 	}
 }
 
-func (f *TFIDF) initStopWords() {
-	if f.stopWords == nil {
-		f.stopWords = make(map[string]interface{})
-	}
+// func (f *TFIDF) initStopWords() {
+// 	if f.stopWords == nil {
+// 		f.stopWords = make(map[string]interface{})
+// 	}
 
-	lines, err := util.ReadLines("../data/stopword")
-	if err != nil {
-		log.Printf("init stop words with error: %s", err)
-	}
+// 	lines, err := util.ReadLines("../data/stopword")
+// 	if err != nil {
+// 		log.Printf("init stop words with error: %s", err)
+// 	}
 
-	for _, w := range lines {
-		f.stopWords[w] = nil
-	}
-}
+// 	for _, w := range lines {
+// 		f.stopWords[w] = nil
+// 	}
+// }
 
 // AddStopWords add stop words to be filtered
 func (f *TFIDF) AddStopWords(words ...string) {

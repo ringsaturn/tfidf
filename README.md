@@ -10,7 +10,7 @@
 ## Guide
 
 ```
-go get github.com/wilcosheh/tfidf
+go get github.com/ringsaturn/tfidf
 glide i
 ```
 
@@ -21,9 +21,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/wilcosheh/tfidf"
-	"github.com/wilcosheh/tfidf/seg"
-	"github.com/wilcosheh/tfidf/similarity"
+	"github.com/ringsaturn/tfidf"
+	"github.com/ringsaturn/tfidf/seg"
+	"github.com/ringsaturn/tfidf/similarity"
 )
 
 func main() {
